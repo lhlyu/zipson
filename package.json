@@ -1,7 +1,7 @@
 {
   "name": "@lhlyu/zipson",
   "description": "A compact JSON-compatible serializer with compression and streaming support. 一个紧凑的 JSON 兼容序列化工具，支持压缩与流式处理。",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "homepage": "https://github.com/lhlyu/zipson",
   "bugs": {
     "url": "https://github.com/lhlyu/zipson/issues"
@@ -9,6 +9,9 @@
   "license": "MIT",
   "author": "lhlyu",
   "repository": "https://github.com/lhlyu/zipson.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "types",

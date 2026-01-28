@@ -1,6 +1,6 @@
 # zipson
 
-[![npm](https://img.shields.io/npm/v/zipson)](https://www.npmjs.com/package/zipson)
+[![npm](https://img.shields.io/npm/v/@lhlyu/zipson)](https://www.npmjs.com/package/@lhlyu/zipson)
 ![Last Commit](https://img.shields.io/github/last-commit/lhlyu/zipson)
 
 Zipson is a drop-in alternative to `JSON.parse` / `JSON.stringify` with added compression and streaming support.

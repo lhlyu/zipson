@@ -1,6 +1,6 @@
 # zipson
 
-[![npm](https://img.shields.io/npm/v/zipson)](https://www.npmjs.com/package/zipson)
+[![npm](https://img.shields.io/npm/v/@lhlyu/zipson)](https://www.npmjs.com/package/@lhlyu/zipson)
 ![Last Commit](https://img.shields.io/github/last-commit/lhlyu/zipson)
 
 Zipson 是 `JSON.parse` / `JSON.stringify` 的可替代方案，提供压缩与流式解析能力。
