@@ -297,16 +297,13 @@ function compressObjectTemplate(
         }
         const key = field[0]
         const nestedStruct = field.length > 1 ? field[1] : undefined
+
+        const nextStruct = field[1]
+        const isNotEmpty = nextStruct && nextStruct.length > 0
+
         compressors.string(compressors, context, key, invertedIndex, writer, options)
-        if (nestedStruct) {
-            compressObjectTemplate(
-                compressors,
-                context,
-                invertedIndex,
-                writer,
-                options,
-                nestedStruct,
-            )
+        if (nestedStruct && isNotEmpty) {
+            compressObjectTemplate(compressors, context, invertedIndex, writer, options, nextStruct)
         }
     }
     writer.write(TEMPLATE_OBJECT_END)
@@ -348,14 +345,18 @@ function compressObjectValues(
         const key = field[0]
         const value = obj[key]
         const nestedStruct = field.length > 1 ? field[1] : undefined
-        if (nestedStruct) {
+
+        const nextStruct = field[1]
+        const isNotEmpty = nextStruct && nextStruct.length > 0
+
+        if (nestedStruct && isNotEmpty) {
             compressObjectValues(
                 compressors,
                 context,
                 invertedIndex,
                 writer,
                 options,
-                nestedStruct,
+                nextStruct,
                 value,
             )
         } else {

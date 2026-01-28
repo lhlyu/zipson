@@ -68,4 +68,16 @@ describe('object', function () {
             true,
         )
     })
+
+    it('nested empty object', function () {
+        testPackUnpack({ a: { 1: {} }, c: 42 })
+    })
+
+    it('nested empty object template 1', function () {
+        testPackUnpack({ a: { 1: {} }, b: { 1: {} }, c: 42 })
+    })
+
+    it('nested empty object template 2', function () {
+        testPackUnpack({ c: 42, a: { 1: {} }, b: { 1: {} } })
+    })
 })

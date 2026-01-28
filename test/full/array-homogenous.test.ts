@@ -111,12 +111,12 @@ describe('array-homogenous', function () {
     })
 
     it('stringShortSingleQuoteOne', function () {
-        // ,Single quotes in very short strings must be escape thus would add one to baseline compressed size
+        // ,Single quotes in very short strings must be escape thus would add one to the baseline compressed size
         testPackUnpackHomogeneousArray("'", ONE, 1)
     })
 
     it('stringShortSingleQuoteMany', function () {
-        // ,Single quotes in very short strings must be escape thus would add one to baseline compressed size
+        // ,Single quotes in very short strings must be escape thus would add one to the baseline compressed size
         testPackUnpackHomogeneousArray("'", MANY, 1)
     })
 

@@ -65,6 +65,11 @@ const result = increment(null)
 | `detectUtcTimestamps` | boolean | `false` | 检测 `2018-01-01T00:00:00Z` 这类 UTC 时间戳并按日期压缩。 |
 | `fullPrecisionFloats` | boolean | `false` | 保留完整浮点精度，默认精度约为 `10^-3`。                  |
 
+## 注意事项
+
+- 不支持循环引用对象，请仅传入 JSON 安全的数据结构。
+- 部分小数（例如 `822.26702880859375`）会出现精度损失。
+
 ## Writer
 
 压缩输出统一通过写入器接口输出，便于扩展不同目标。自定义写入器需要实现：

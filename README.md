@@ -65,6 +65,11 @@ const result = increment(null)
 | `detectUtcTimestamps` | boolean | `false` | Detect UTC timestamps such as `2018-01-01T00:00:00Z` and compress them as dates. |
 | `fullPrecisionFloats` | boolean | `false` | Keep full floating point precision. Default is `10^-3`.                          |
 
+## Notes
+
+- Circular references are not supported. Provide JSON-safe objects only.
+- Some decimals (for example `822.26702880859375`) can lose precision.
+
 ## Writer
 
 Compression output is generalized to a writer class to support different output targets. Custom writers should implement:
